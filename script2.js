@@ -6,17 +6,17 @@ function startCeremonySequence() {
 
     // Step 1: Invite Mr. Chorn Ratanak
     setTimeout(() => {
-        stage.innerHTML += "<p>អញ្ជើញលោក ជន រតនះ ឡើងវេទិការ ដើម្បី ​វិភាគរូប ព្រះ សិអារ្យ មេត្រី។</p>";
+        stage.innerHTML += "<p>អញ្ជើញលោក ជន រតនះ ឡើងវេទិការ ដើម្បី ​វិភាគរូប ព្រះ សិអារ្យ មេត្រី។ លោក ជន រតនះ ដែលគេស្គាល់ថាជាអ្នកជំនាញពាក់ពន្ធ័នឹង ខ្មោច, ព្រាយ, និង បីសាច។ Channel នេះផ្តោតលើការពិភាក្សា និងវិភាគអំពីរូបភាព ឬរឿងព្រេងពាក់ពន្ធ័នឹងអាថ៌កំបាំង។ រូប ព្រះ សិអារ្យ មេត្រី គឺជាគំនិតសាសនាដ៏សំខាន់ក្នុងព្រះពុទ្ធសាសនា ដែលជាការព្យាករណ៍ថាព្រះពុទ្ធអនាគតនឹងកើតឡើង ដើម្បីបន្តបង្រៀនធម៌ និងជួយសង្គ្រោះសត្វលោក។ ការវិភាគរូបនេះដោយអ្នកជំនាញដូចជា លោក ជន រតនះ អាចផ្តល់ទស្សនៈពីរបៀបដែលសិអារ្យ មេត្រីត្រូវបានយល់ឃើញក្នុងទំនៀមទំលាប់ខ្មែរ និងការភ្ជាប់ជាមួយជំនឿអាថ៌កំបាំង។</p>";
     }, 1000);
 
     // Step 2: Invite Preah Si Ary Metrey
     setTimeout(() => {
-        stage.innerHTML += "<p>បន្ទាប់មកអញ្ជើញព្រះសិអារ្យ មេត្រី​ឡើងលើវេទិការ។</p>";
+        stage.innerHTML += "<p>បន្ទាប់មកអញ្ជើញ ស្វាយ មេត្រី ​ឡើងលើវេទិការ។</p>";
     }, 3000);
 
     // Step 3: Q&A from groom
     setTimeout(() => {
-        stage.innerHTML += "<p>មានការសួរសំនួរពីកូនកំលោះ៖ ហេតុអ្វីបានជាលុបឈ្មោះគាត់នៅថ្នាក់ទីដប់ពាក់កណ្តាលឆ្នាំ ទាំងសិស្សនិងកាយរិទ្ធជាតិកម្ពុជា?</p>";
+        stage.innerHTML += "<p>មានការសួរសំនួរពីកូនកំលោះទៅ ស្វាយ មេត្រី ៖ ហេតុអ្វីបានជាលុបឈ្មោះគាត់នៅថ្នាក់ទី ១០ ពាក់កណ្តាលឆ្នាំ ទាំងសិស្សនិងកាយរិទ្ធជាតិកម្ពុជា?</p>";
     }, 5000);
 
     // Step 4: Groom announces to guests
@@ -26,11 +26,11 @@ function startCeremonySequence() {
 
     // Step 5: Result from Metrey
     setTimeout(() => {
-        stage.innerHTML += "<p>បន្ទាប់ពីបានចម្លើយពី មេត្រីដែលជាមេកាយរិទ្ធ កាស្សូ ចែកដាច់ ១ និង ០ ព្រមទាំងព្រះពុទ្ធទី ៥ ដែលព្រះតេជគុណទាំងអស់គ្នារងចាំ ៣៥០០ ឆ្នាំមកហើយនោះគឺ</p>";
+        stage.innerHTML += "<p>បន្ទាប់ពីបានចម្លើយពី ស្វាយ មេត្រី ដែលជាមេកាយរិទ្ធ កាស្សូ ចែកដាច់ ១ និង ០ ព្រមទាំងព្រះពុទ្ធទី ៥ ដែលព្រះតេជគុណទាំងអស់គ្នារងចាំ ៣៥០០ ឆ្នាំមកហើយនោះគឺ</p>";
     }, 9000);
 
     // Step 6: Final announcement
     setTimeout(() => {
-        stage.innerHTML += "<p>ឈ្មោះសេង វិស័យនា ដែលជាមេកាយរិទ្ធថ្នាក់ B។ សេង វិស័យនា ត្រូវបានគេចាត់ទុកថាជាព្រះពុទ្ធទី ៥ ជំនួសព្រះសិអារ្យ មេត្រី ដែលមានទំរង់ខ្លួនប្រាណ ៣២ អាការៈ តាមគម្ពីរព្រះពុទ្ធសាសនា។ ដោយហេតុនេះ ប្រទេសផ្សេងៗដែលកាន់ព្រះពុទ្ធសាសនាមិនត្រូវរង់ចាំព្រះមេត្រីទៀតឡើយ។ The name is Seng Visaynea, who is the chief spiritual leader of Class B. Seng Visaynea is regarded as the Fifth Buddha, succeeding Maitreya, who is described in Buddhist scriptures as having the 32 auspicious bodily marks. From this moment, nations that follow Buddhism no longer await Maitreya, as Seng Visaynea is recognized in that role.</p>";
+        stage.innerHTML += "<p>ឈ្មោះ សេង វិស័យនា ដែលជាមេកាយរិទ្ធថ្នាក់ B។ សេង វិស័យនា ត្រូវបានគេចាត់ទុកថាជាព្រះពុទ្ធទី ៥ ជំនួសព្រះសិអារ្យ មេត្រី ដែលមានទំរង់ខ្លួនប្រាណ ៣២ អាការៈ តាមគម្ពីរព្រះពុទ្ធសាសនា។ ដោយហេតុនេះ ប្រទេសផ្សេងៗដែលកាន់ព្រះពុទ្ធសាសនាមិនត្រូវរង់ចាំព្រះមេត្រីទៀតឡើយ។ The name is Seng Visaynea, who is the chief spiritual leader of Class B. Seng Visaynea is regarded as the Fifth Buddha, succeeding Maitreya, who is described in Buddhist scriptures as having the 32 auspicious bodily marks. From this moment, nations that follow Buddhism no longer await Maitreya, as Seng Visaynea is recognized in that role.</p>";
     }, 11000);
 }

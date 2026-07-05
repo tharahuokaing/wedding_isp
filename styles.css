@@ -1,69 +1,317 @@
-body{
-font-family:"Noto Sans Khmer",sans-serif;
-background:#eef5fb;
-margin:0;
-color:#222;
+/* ==========================================
+   Khmer Traditional Theme
+   Enterprise ISP Conference Edition
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+body{
+    font-family:"Khmer OS Battambang","Noto Sans Khmer",serif;
+    background:
+        linear-gradient(rgba(250,245,235,.96),rgba(248,240,220,.98)),
+        url("https://www.transparenttextures.com/patterns/cream-paper.png");
+    color:#4b2d14;
+    line-height:1.8;
+}
+
+/* ===========================
+   Header
+=========================== */
 
 header{
-background:#0055aa;
-color:white;
-text-align:center;
-padding:40px;
+    background:
+        linear-gradient(135deg,#7b0000,#b8860b,#7b0000);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+    border-bottom:8px solid #d4af37;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
-.hero{
-padding:20px;
+header h1{
+    font-size:2.8rem;
+    letter-spacing:2px;
+    text-shadow:3px 3px 5px rgba(0,0,0,.4);
 }
 
-iframe{
-width:100%;
-height:500px;
-border:none;
-border-radius:10px;
-box-shadow:0 0 20px rgba(0,0,0,.2);
+header p{
+    margin-top:12px;
+    font-size:1.2rem;
+    color:#ffe8a3;
 }
+
+/* Decorative Khmer Line */
+
+header::after{
+    content:"❖ ❖ ❖";
+    display:block;
+    margin-top:20px;
+    color:#ffd54f;
+    font-size:28px;
+}
+
+/* ===========================
+   Main Layout
+=========================== */
 
 section{
-max-width:1100px;
-margin:auto;
-padding:30px;
+    max-width:1150px;
+    margin:50px auto;
+    padding:0 25px;
 }
+
+.hero iframe{
+    width:100%;
+    height:560px;
+    border:6px solid #b8860b;
+    border-radius:18px;
+    background:white;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* ===========================
+   Section Title
+=========================== */
+
+h2{
+    text-align:center;
+    color:#8b0000;
+    margin-bottom:25px;
+    font-size:2rem;
+    position:relative;
+}
+
+h2::after{
+    content:"";
+    display:block;
+    width:180px;
+    height:4px;
+    background:#c89b3c;
+    margin:12px auto;
+    border-radius:5px;
+}
+
+/* ===========================
+   Khmer Card
+=========================== */
 
 .card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 0 15px rgba(0,0,0,.15);
+
+    background:#fffaf2;
+
+    border:3px solid #c89b3c;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:
+    0 12px 24px rgba(0,0,0,.15);
+
+    position:relative;
+
 }
+
+/* Corner Decoration */
+
+.card::before{
+
+content:"❖";
+
+position:absolute;
+
+top:10px;
+
+left:15px;
+
+font-size:22px;
+
+color:#b8860b;
+
+}
+
+.card::after{
+
+content:"❖";
+
+position:absolute;
+
+bottom:10px;
+
+right:15px;
+
+font-size:22px;
+
+color:#b8860b;
+
+}
+
+.card h3{
+
+color:#7b0000;
+
+margin-bottom:18px;
+
+font-size:1.8rem;
+
+}
+
+.card p{
+
+margin-bottom:18px;
+
+font-size:1.08rem;
+
+}
+
+/* ===========================
+   Image
+=========================== */
 
 .analysis img{
+
 display:block;
-width:60%;
+
 margin:auto;
-border-radius:12px;
-box-shadow:0 0 20px rgba(0,0,0,.25);
+
+width:65%;
+
+border:6px solid #c89b3c;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+transition:.4s;
+
 }
 
+.analysis img:hover{
+
+transform:scale(1.02);
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
 button{
-background:#0066cc;
+
+background:linear-gradient(#d4af37,#8b6508);
+
 color:white;
-border:none;
-padding:15px 30px;
+
 font-size:18px;
-border-radius:8px;
+
+font-weight:bold;
+
+padding:14px 30px;
+
+border:none;
+
+border-radius:12px;
+
 cursor:pointer;
-margin-top:20px;
+
+transition:.35s;
+
+box-shadow:0 6px 15px rgba(0,0,0,.25);
+
 }
 
 button:hover{
-background:#004c99;
+
+background:linear-gradient(#ffd54f,#a06b00);
+
+transform:translateY(-3px);
+
 }
 
+/* ===========================
+   Footer
+=========================== */
+
 footer{
-background:#222;
-color:white;
+
+margin-top:70px;
+
+background:
+
+linear-gradient(135deg,#5b0000,#7b0000,#5b0000);
+
+color:#ffe6a6;
+
 text-align:center;
-padding:25px;
-margin-top:40px;
+
+padding:35px;
+
+font-size:17px;
+
+border-top:6px solid #d4af37;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.hero iframe{
+
+height:380px;
+
+}
+
+.analysis img{
+
+width:95%;
+
+}
+
+header h1{
+
+font-size:2rem;
+
+}
+
+.card{
+
+padding:22px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+
+padding:40px 15px;
+
+}
+
+header h1{
+
+font-size:1.6rem;
+
+}
+
+h2{
+
+font-size:1.5rem;
+
+}
+
+button{
+
+width:100%;
+
+}
+
 }

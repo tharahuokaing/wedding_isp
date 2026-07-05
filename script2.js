@@ -1,7 +1,12 @@
-// script2.js
+// Script2.js
 function startCeremonySequence() {
     const stage = document.getElementById("stageSequence");
-    stage.innerHTML = ""; // clear previous content
+    if (!stage) {
+        console.error("Error: Element with ID 'stageSequence' not found.");
+        return;
+    }
+    
+    stage.innerHTML = ""; // Clear previous content
 
     const steps = [
         {
@@ -30,11 +35,21 @@ function startCeremonySequence() {
         }
     ];
 
-    steps.forEach(step => {
+    // Using let to dynamically manage execution sequence 
+    let cumulativeDelay = 0;
+
+    for (const step of steps) {
+        cumulativeDelay = step.delay; // Syncs up accurately with timestamps provided
+
         setTimeout(() => {
             const p = document.createElement("p");
             p.textContent = step.text;
+            p.className = "step-text"; // Useful for setting CSS padding, animations, or margins
+            
             stage.appendChild(p);
-        }, step.delay);
-    });
+            
+            // Auto-scrolling feature so users see text as it builds down long screens
+            stage.scrollTop = stage.scrollHeight; 
+        }, cumulativeDelay);
+    }
 }

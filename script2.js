@@ -1,5 +1,4 @@
 // script2.js
-
 function startCeremonySequence() {
     const stage = document.getElementById("stageSequence");
     stage.innerHTML = ""; // clear previous content

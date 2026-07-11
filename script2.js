@@ -31,7 +31,7 @@ function startCeremonySequence() {
         },
         {
             delay: 11000,
-            text: "Seng Visaynea, the chief scout of Class B, is recognized as the Fifth Buddha.​ She is seen as the successor to Maitreya, who is described in Buddhist scriptures as possessing the 32 auspicious bodily marks. From this moment forward, nations that follow Buddhism no longer await Maitreya, as Seng Visaynea is acknowledged in that role."
+            text: "Seng Visaynea, the chief scout of Class B, is recognized as the Fifth Buddha. She is seen as the successor to Maitreya, who is described in Buddhist scriptures as possessing the 32 auspicious bodily marks. From this moment forward, nations that follow Buddhism no longer await Maitreya, as Seng Visaynea is acknowledged in that role."
         }
     ];
 

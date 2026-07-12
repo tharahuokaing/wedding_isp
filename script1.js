@@ -16,7 +16,7 @@ weddingAudio.volume = 0.4; // Set elegant ambient volume threshold (40%)
 // Create Floating Audio Control Interface Button
 const audioBtn = document.createElement('button');
 audioBtn.id = 'weddingAudioToggleBtn';
-audioBtn.innerHTML = '🎵 តន្ត្រី'; // Initial Native Khmer Button Prompt Label
+audioBtn.innerHTML = '🎵'; // Initial Native Khmer Button Prompt Label
 
 // Apply inline layout styling to cleanly position the controller on screen
 Object.assign(audioBtn.style, {
@@ -62,12 +62,12 @@ function toggleWeddingMusic() {
             .catch(error => {
                 console.log("Autoplay context restricted by browser security policies.", error);
                 // Graceful fallback: silently keep the button state ready instead of alerting
-                audioBtn.innerHTML = '🎵 តន្ត្រី';
+                audioBtn.innerHTML = '🎵';
                 audioBtn.style.borderColor = '#c5a059';
             });
     } else {
         weddingAudio.pause();
-        audioBtn.innerHTML = '🎵 តន្ត្រី'; // Revert back to "Play Music"
+        audioBtn.innerHTML = '🎵'; // Revert back to "Play Music"
         audioBtn.style.borderColor = '#c5a059';
     }
 }
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // User Interaction Trigger: Attempts to start music smoothly upon the first real window interaction
     const initiateAutoplay = () => {
-        if (weddingAudio.paused && audioBtn.innerHTML === '🎵 តន្ត្រី') {
+        if (weddingAudio.paused && audioBtn.innerHTML === '🎵') {
             weddingAudio.play()
                 .then(() => {
                     audioBtn.innerHTML = '🔇 បិទតន្ត្រី';

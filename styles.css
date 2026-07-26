@@ -508,8 +508,8 @@ footer p:first-child {
 /* Activated via JS once all characters appear */
 .led-hunting-text.start-hunting {
     animation: 
-        ledHuntingPulse 1.2s ease-in-out 10,
-        ledDisappear 1s ease-out 12s forwards;
+        ledHuntingPulse 6.2s ease-in-out 10,
+        ledDisappear 6s ease-out 20s forwards;
 }
 
 /* LED Running Cursor Effect */
@@ -518,7 +518,7 @@ footer p:first-child {
     display: inline-block;
     margin-left: 4px;
     color: #00ff66; /* Bright LED Mint Green */
-    animation: led-blink 0.6s infinite alternate;
+    animation: led-blink 5.6s infinite alternate;
 }
 
 @keyframes led-blink {

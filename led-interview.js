@@ -1,7 +1,7 @@
 // led-interview.js - Handles LED Running Text, Hunting Animation & Stage Sequence
 
 document.addEventListener("DOMContentLoaded", () => {
-    const textToType = "សហវាយ មេត្រី";
+    const textToType = "សិអារ្យ មេត្រី";
     const ledElement = document.getElementById("interviewLedText");
     
     if (ledElement) {

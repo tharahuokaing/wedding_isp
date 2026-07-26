@@ -335,3 +335,26 @@ footer p:first-child {
         padding: 20px 15px;
     }
 }
+
+/* LED Running Cursor Effect */
+.led-running::after {
+    content: "█";
+    display: inline-block;
+    margin-left: 2px;
+    color: #00ff00; /* LED Green (change as needed) */
+    animation: led-blink 0.6s infinite alternate;
+}
+
+@keyframes led-blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Optional Styling for step items */
+.step-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-left: 3px solid #00ff00;
+    font-family: 'Courier New', monospace;
+}

@@ -41,62 +41,87 @@
             </nav>
         </section>
 
-        <!-- Interview Section -->
-        <section class="interview">
-            <h2>🎤 ការសម្ភាស / Interview</h2>
-            
+       <!-- Interview Section -->
+        <section class="interview-section">
+    
+        <!-- LED Header Banner Container -->
+        <div class="led-banner-container">
+            <h3 id="interviewLedText" class="led-hunting-text led-running"></h3>
+        </div>
+
+        <!-- Section Header & Sequence Control Button -->
+        <div class="interview-header-controls">
+            <h2 class="interview-main-title">🎤 ការសម្ភាស / Interview</h2>
             <div id="stageSequence"></div>
-            <button onclick="startCeremonySequence()">▶️ ចាប់ផ្តើមកម្មវិធី / Start Ceremony Sequence</button>
-                
-            <div class="card">
-                <h3>លោក ឡុង ឡាអ៊ីន / Mr. Long Lain</h3>
+            <button type="button" class="btn-ceremony-sequence" onclick="startCeremonySequence()">
+                ▶️ ចាប់ផ្តើមកម្មវិធី / Start Ceremony Sequence
+            </button>
+        </div>
 
-                <div class="content-block">
+        <!-- Main Interview Card -->
+        <div class="card interview-card">
+            <h3 class="interviewee-name">លោក ឡុង ឡាអ៊ីន / Mr. Long Lain</h3>
+
+            <!-- Content Block 1: 6G & Duty-Free / Odyssey -->
+            <div class="content-block step-item">
+                <div class="bilingual-pair">
                     <p class="khmer-text">
-                        ថ្ងៃនេះយើងបានជួបសម្ភាសជាមួយលោក ឡុង ឡាអ៊ីន ដែលបានចែករំលែកចក្ខុវិស័យអំពីការអភិវឌ្ឍបច្ចេកវិទ្យា 6G និងអនាគតនៃសេវាអ៊ីនធើណេតសម្រាប់សង្គមឌីជីថល។ វត្តមានរបស់ ឡុងឡាអ៊ីន និងអមមកជាមួយខាង DUTY-FREE ដែលយើងតែងតែដឹងថា DUTY-FREE គ្មានប្រទេសណាមួយក្នុងសកលលោកហ៊ានទារពន្ធនោះឡើយ។ និងមានការសម្ភាសខាង Duty-Free ពាក់ពន្ធ័ ផ្កាយរណបដែលបង្ហោះដោយ Oddysey ដែលជាចៅប្រុសរបស់ Jonhnie Walker ជុំវិញគន្លងភពព្រះអង្គារដែលយើងឃើញក្នុងប្រព័ន្ធ Solar System ហៅថា 2001 Mars Odyssey គឺជាការពិតដែរឬទេ?
+                        <strong>១. 6G និងប្រព័ន្ធផ្កាយរណប៖</strong> ថ្ងៃនេះយើងបានជួបសម្ភាសជាមួយលោក ឡុង ឡាអ៊ីន ដែលបានចែករំលែកចក្ខុវិស័យអំពីការអភិវឌ្ឍបច្ចេកវិទ្យា 6G និងអនាគតនៃសេវាអ៊ីនធើណេតសម្រាប់សង្គមឌីជីថល។ វត្តមានរបស់ ឡុងឡាអ៊ីន និងអមមកជាមួយខាង DUTY-FREE ដែលយើងតែងតែដឹងថា DUTY-FREE គ្មានប្រទេសណាមួយក្នុងសកលលោកហ៊ានទារពន្ធនោះឡើយ។ និងមានការសម្ភាសខាង Duty-Free ពាក់ពន្ធ័ ផ្កាយរណបដែលបង្ហោះដោយ Oddysey ដែលជាចៅប្រុសរបស់ Jonhnie Walker ជុំវិញគន្លងភពព្រះអង្គារដែលយើងឃើញក្នុងប្រព័ន្ធ Solar System ហៅថា 2001 Mars Odyssey គឺជាការពិតដែរឬទេ?
                     </p>
                     <p class="english-text">
-                        Today, we interviewed Mr. Long Lain, who shared his vision regarding 6G technology development and the future of internet services for a digital society. Mr. Long Lain's presence was accompanied by Duty-Free representatives—noting that no nation in the world levies taxes on duty-free items. The interview with Duty-Free also touched upon whether the Odyssey satellite—launched into Martian orbit as seen in the solar system under the name 2001 Mars Odyssey—was truly launched by the grandson of Johnnie Walker.
+                        <strong>1. 6G & Satellite System:</strong> Today, we interviewed Mr. Long Lain, who shared his vision regarding 6G technology development and the future of internet services for a digital society. Mr. Long Lain's presence was accompanied by Duty-Free representatives—noting that no nation in the world levies taxes on duty-free items. The interview with Duty-Free also touched upon whether the Odyssey satellite—launched into Martian orbit as seen in the solar system under the name 2001 Mars Odyssey—was truly launched by the grandson of Johnnie Walker.
                     </p>
                 </div>
+            </div>
 
-                <div class="content-block">
+            <!-- Content Block 2: Free 6G Vision -->
+            <div class="content-block step-item">
+                <div class="bilingual-pair">
                     <p class="khmer-text">
-                        នៅក្នុងបទសម្ភាស លោកបានលើកឡើងពីគំនិតនៃការផ្តល់សេវា 6G ដោយមិនគិតថ្លៃ ជាចក្ខុវិស័យសម្រាប់អនាគត។ លោកបានពន្យល់ថា ការអនុវត្តគម្រោងបែបនេះនឹងអាស្រ័យលើកត្តាជាច្រើន រួមមានការវិនិយោគ បច្ចេកវិទ្យា បទប្បញ្ញត្តិ និងកិច្ចសហការរវាងភាគីពាក់ព័ន្ធ។
+                        <strong>២. ចក្ខុវិស័យសេវា 6G៖</strong> នៅក្នុងបទសម្ភាស លោកបានលើកឡើងពីគំនិតនៃការផ្តល់សេវា 6G ដោយមិនគិតថ្លៃ ជាចក្ខុវិស័យសម្រាប់អនាគត។ លោកបានពន្យល់ថា ការអនុវត្តគម្រោងបែបនេះនឹងអាស្រ័យលើកត្តាជាច្រើន រួមមានការវិនិយោគ បច្ចេកវិទ្យា បទប្បញ្ញត្តិ និងកិច្ចសហការរវាងភាគីពាក់ព័ន្ធ។
                     </p>
                     <p class="english-text">
-                        During the interview, he presented the concept of offering free 6G services as a vision for the future. He explained that implementing such a project would depend on multiple factors, including financial investment, technology, regulatory frameworks, and stakeholder collaboration.
+                        <strong>2. Free 6G Vision:</strong> During the interview, he presented the concept of offering free 6G services as a vision for the future. He explained that implementing such a project would depend on multiple factors, including financial investment, technology, regulatory frameworks, and stakeholder collaboration.
                     </p>
+                    </div>
                 </div>
 
-                <div class="content-block">
-                    <p class="khmer-text">
-                        ក្នុងកម្មវិធីនេះ ក៏មានការបង្ហាញរូបភាពមួយសម្រាប់ជាប្រធានបទពិភាក្សា ដែលអ្នករៀបចំកម្មវិធីខ្លះបានបកស្រាយថាមានទំនាក់ទំនងទៅនឹងជំនឿអំពីព្រះសិអារ្យមេត្រី។ ការបកស្រាយនេះជាទស្សនៈ ឬជំនឿរបស់អ្នកបកស្រាយប៉ុណ្ណោះ ហើយមិនគួរចាត់ទុកថាជាការបញ្ជាក់អត្តសញ្ញាណ ឬជាភស្តុតាងនៃការអនុម័តចំពោះគម្រោងណាមួយឡើយ។
-                    </p>
-                    <p class="english-text">
-                        The event also featured an image as a discussion topic, which some organizers interpreted as being connected to beliefs surrounding Maitreya Buddha (Preah Ser-Ayr Maitrei). This interpretation represents solely the personal view or belief of the interpreters and should not be considered an official identification or proof of approval for any project.
-                    </p>
+                <!-- Content Block 3: Preah Ser-Ayr Maitrei Beliefs -->
+                <div class="content-block step-item">
+                    <div class="bilingual-pair">
+                        <p class="khmer-text">
+                            <strong>៣. ប្រធានបទពិភាក្សា៖</strong> ក្នុងកម្មវិធីនេះ ក៏មានការបង្ហាញរូបភាពមួយសម្រាប់ជាប្រធានបទពិភាក្សា ដែលអ្នករៀបចំកម្មវិធីខ្លះបានបកស្រាយថាមានទំនាក់ទំនងទៅនឹងជំនឿអំពីព្រះសិអារ្យមេត្រី។ ការបកស្រាយនេះជាទស្សនៈ ឬជំនឿរបស់អ្នកបកស្រាយប៉ុណ្ណោះ ហើយមិនគួរចាត់ទុកថាជាការបញ្ជាក់អត្តសញ្ញាណ ឬជាភស្តុតាងនៃការអនុម័តចំពោះគម្រោងណាមួយឡើយ។
+                        </p>
+                        <p class="english-text">
+                            <strong>3. Discussion Topic:</strong> The event also featured an image as a discussion topic, which some organizers interpreted as being connected to beliefs surrounding Maitreya Buddha (Preah Ser-Ayr Maitrei). This interpretation represents solely the personal view or belief of the interpreters and should not be considered an official identification or proof of approval for any project.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="content-block">
-                    <p class="khmer-text">
-                        ជាមួយគ្នានេះ លោក ឡុង ឡាអ៊ីន បានបង្ហាញអំពីពិធីប្រគល់ឃ្លាគ្រាប់ពូជ mnemonic (seed phrase) ដែលជាគន្លឹះសំខាន់ក្នុងការកាន់កាប់ និងការពារកាបូបឌីជីថល (digital wallet) សម្រាប់ eCash (Cash for the Internet)។ Seed phrase គឺជាឃ្លាពាក្យច្រើនដែលប្រើសម្រាប់បង្កើត និងស្ដារវិញកាបូបឌីជីថល។ វាមានតួនាទីដូចជាគន្លឹះសុវត្ថិភាព ដែលអាចផ្តល់សិទ្ធិចូលដំណើរការទ្រព្យសម្បត្តិឌីជីថលរបស់អ្នក។
-                    </p>
-                    <p class="english-text">
-                        Additionally, Mr. Long Lain presented a handover ceremony for a mnemonic seed phrase—the crucial key for owning and protecting a digital wallet for eCash (Cash for the Internet). A seed phrase is a multi-word sequence used to generate and restore a digital wallet, acting as a security key that grants access to your digital assets.
-                    </p>
+                <!-- Content Block 4: Seed Phrase & eCash -->
+                <div class="content-block step-item">
+                    <div class="bilingual-pair">
+                        <p class="khmer-text">
+                            <strong>៤. ការប្រគល់ Mnemonic Seed Phrase៖</strong> ជាមួយគ្នានេះ លោក ឡុង ឡាអ៊ីន បានបង្ហាញអំពីពិធីប្រគល់ឃ្លាគ្រាប់ពូជ mnemonic (seed phrase) ដែលជាគន្លឹះសំខាន់ក្នុងការកាន់កាប់ និងការពារកាបូបឌីជីថល (digital wallet) សម្រាប់ eCash (Cash for the Internet)។ Seed phrase គឺជាឃ្លាពាក្យច្រើនដែលប្រើសម្រាប់បង្កើត និងស្ដារវិញកាបូបឌីជីថល។ វាមានតួនាទីដូចជាគន្លឹះសុវត្ថិភាព ដែលអាចផ្តល់សិទ្ធិចូលដំណើរការទ្រព្យសម្បត្តិឌីជីថលរបស់អ្នក។
+                        </p>
+                        <p class="english-text">
+                            <strong>4. Mnemonic Seed Phrase Handover:</strong> Additionally, Mr. Long Lain presented a handover ceremony for a mnemonic seed phrase—the crucial key for owning and protecting a digital wallet for eCash (Cash for the Internet). A seed phrase is a multi-word sequence used to generate and restore a digital wallet, acting as a security key that grants access to your digital assets.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="content-block">
-                    <p class="khmer-text">
-                        ក្នុងពិធីនេះ លោកបានពន្យល់ពីអត្ថន័យពាក្យ Digital 1s and 0s ដែលជាមូលដ្ឋាននៃពិភពឌីជីថលទាំងមូល។ ពាក្យនេះសំដៅលើ binary code ដែលប្រើលេខ 1 និង 0 ដើម្បីតំណាងឲ្យទិន្នន័យ និងការគណនា។ គ្រប់កម្មវិធី ការទូទាត់ឌីជីថល និងប្រព័ន្ធ blockchain ទាំងអស់ ត្រូវបានបង្កើតឡើងពីការបកស្រាយ 1s និង 0s ទាំងនេះ។ កម្មវិធីក៏បានរំលឹកពីទំនាក់ទំនងរវាងលោក ឡុង ឡាអ៊ីន និងលោក ហួកាំង ថារ៉ា ដែលធ្លាប់សិក្សា និងជាអតីតកាយឫទ្ធិជាតិកម្ពុជា(សុទ្ធ) ជំនាន់ដូចគ្នាកាលពីវ័យកុមារ ហើយបានចូលរួមសហការក្នុងការរៀបចំព្រឹត្តិការណ៍នេះ។
-                    </p>
-                    <p class="english-text">
-                        At the ceremony, he explained the meaning of "Digital 1s and 0s"—the foundation of the entire digital realm. This refers to binary code, which uses 1s and 0s to represent data and calculations. All applications, digital payments, and blockchain systems are built upon the interpretation of these 1s and 0s. The event also highlighted the relationship between Mr. Long Lain and Mr. Huokaing Thara, who studied together and were former childhood National Scouts of Cambodia (core generation), joining hands to co-organize this event.
-                    </p>
+                <!-- Content Block 5: Digital 1s & 0s and Scouting Connection -->
+                <div class="content-block step-item">
+                    <div class="bilingual-pair">
+                        <p class="khmer-text">
+                            <strong>៥. មូលដ្ឋានគ្រឹះ Digital 1s & 0s ៖</strong> ក្នុងពិធីនេះ លោកបានពន្យល់ពីអត្ថន័យពាក្យ Digital 1s and 0s ដែលជាមូលដ្ឋាននៃពិភពឌីជីថលទាំងមូល។ ពាក្យនេះសំដៅលើ binary code ដែលប្រើលេខ 1 និង 0 ដើម្បីតំណាងឲ្យទិន្នន័យ និងការគណនា។ គ្រប់កម្មវិធី ការទូទាត់ឌីជីថល និងប្រព័ន្ធ blockchain ទាំងអស់ ត្រូវបានបង្កើតឡើងពីការបកស្រាយ 1s និង 0s ទាំងនេះ។ កម្មវិធីក៏បានរំលឹកពីទំនាក់ទំនងរវាងលោក ឡុង ឡាអ៊ីន និងលោក ហួកាំង ថារ៉ា ដែលធ្លាប់សិក្សា និងជាអតីតកាយឫទ្ធិជាតិកម្ពុជា(សុទ្ធ) ជំនាន់ដូចគ្នាកាលពីវ័យកុមារ ហើយបានចូលរួមសហការក្នុងការរៀបចំព្រឹត្តិការណ៍នេះ។
+                        </p>
+                        <p class="english-text">
+                            <strong>5. Digital 1s & 0s Foundation:</strong> At the ceremony, he explained the meaning of "Digital 1s and 0s"—the foundation of the entire digital realm. This refers to binary code, which uses 1s and 0s to represent data and calculations. All applications, digital payments, and blockchain systems are built upon the interpretation of these 1s and 0s. The event also highlighted the relationship between Mr. Long Lain and Mr. Huokaing Thara, who studied together and were former childhood National Scouts of Cambodia (core generation), joining hands to co-organize this event.
+                        </p>
+                    </div>
                 </div>
 
-                <button id="playBtn">▶️ ចាក់សំឡេងសម្ភាស / Play Interview Audio</button>
             </div>
         </section>
 

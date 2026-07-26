@@ -1,45 +1,11 @@
 // Script2.js
-
-// Utility helper to create asynchronous delays
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-/**
- * Types out text word-by-word into a parent container.
- */
-async function typeTextWordByWord(parent, text, className, wordSpeed = 35) {
-    const stage = document.getElementById("stageSequence");
-    const p = document.createElement("p");
-    p.className = className;
-    parent.appendChild(p);
-
-    // Split text by space for word-by-word streaming
-    const words = text.split(" ");
-
-    for (let i = 0; i < words.length; i++) {
-        p.textContent += (i === 0 ? "" : " ") + words[i];
-
-        // Smoothly auto-scroll on every word added
-        if (stage) {
-            stage.scrollTo({
-                top: stage.scrollHeight,
-                behavior: "smooth"
-            });
-        }
-
-        await sleep(wordSpeed);
-    }
-}
-
-/**
- * Main ceremony sequence runner with word-by-word animation.
- */
-async function startCeremonySequence(language = "both", wordSpeed = 35) {
+function startCeremonySequence(language = "both", typingSpeed = 30) {
     const stage = document.getElementById("stageSequence");
     if (!stage) {
         console.error("Error: Element with ID 'stageSequence' not found.");
         return;
     }
-
+    
     stage.innerHTML = ""; // Clear previous content
 
     const steps = [
@@ -75,22 +41,65 @@ async function startCeremonySequence(language = "both", wordSpeed = 35) {
         }
     ];
 
+    // Helper function: Types out text character-by-character with LED cursor effect
+    function typeText(element, text, speed, onComplete) {
+        let index = 0;
+        // Array.from splits correctly preserving Unicode/Khmer grapheme clusters
+        const characters = Array.from(text); 
+
+        function renderNextChar() {
+            if (index < characters.length) {
+                element.textContent += characters[index];
+                index++;
+
+                // Keep auto-scrolling to the bottom as new characters appear
+                stage.scrollTo({
+                    top: stage.scrollHeight,
+                    behavior: "smooth"
+                });
+
+                setTimeout(renderNextChar, speed);
+            } else if (onComplete) {
+                onComplete();
+            }
+        }
+
+        renderNextChar();
+    }
+
+    let cumulativeDelay = 0;
+
     for (const step of steps) {
-        // Wait for the step's initial delay before starting typing
-        await sleep(step.delay);
+        cumulativeDelay = step.delay;
 
-        const stepWrapper = document.createElement("div");
-        stepWrapper.className = "step-item";
-        stage.appendChild(stepWrapper);
+        setTimeout(() => {
+            const stepWrapper = document.createElement("div");
+            stepWrapper.className = "step-item";
 
-        // Stream Khmer word-by-word if requested
-        if (language === "khmer" || language === "both") {
-            await typeTextWordByWord(stepWrapper, step.text_khmer, "step-text step-khmer", wordSpeed);
-        }
+            // Render Khmer text character-by-character
+            if (language === "khmer" || language === "both") {
+                const pKhmer = document.createElement("p");
+                pKhmer.className = "step-text step-khmer led-running";
+                stepWrapper.appendChild(pKhmer);
 
-        // Stream English word-by-word if requested
-        if (language === "english" || language === "both") {
-            await typeTextWordByWord(stepWrapper, step.text_english, "step-text step-english", wordSpeed);
-        }
+                typeText(pKhmer, step.text_khmer, typingSpeed, () => {
+                    // Remove active blinking cursor once typing finishes
+                    pKhmer.classList.remove("led-running");
+                });
+            }
+
+            // Render English text character-by-character
+            if (language === "english" || language === "both") {
+                const pEnglish = document.createElement("p");
+                pEnglish.className = "step-text step-english led-running";
+                stepWrapper.appendChild(pEnglish);
+
+                typeText(pEnglish, step.text_english, typingSpeed, () => {
+                    pEnglish.classList.remove("led-running");
+                });
+            }
+
+            stage.appendChild(stepWrapper);
+        }, cumulativeDelay);
     }
 }

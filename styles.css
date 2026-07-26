@@ -403,14 +403,14 @@ footer p:first-child {
     
     /* 
        Animation Breakdown:
-       1. ledAppear: Running light turn-on (0.8s)
+       1. ledAppear: Running light turn-on (0.30s)
        2. ledHuntingPulse: Pulsing/hunting light effect (1.2s per loop x 10 times = 12s)
        3. ledDisappear: Smooth fade-out (1s delay: 12.8s)
     */
     animation: 
-        ledAppear 0.8s ease-in forwards,
-        ledHuntingPulse 1.2s ease-in-out 0.8s 10,
-        ledDisappear 1s ease-out 12.8s forwards;
+        ledAppear 0.30s ease-in forwards,
+        ledHuntingPulse 1.8s ease-in-out 1.8s 10,
+        ledDisappear 8s ease-out 20.8s forwards;
 }
 
 /* 1. Turning On & Initial LED Ignition */

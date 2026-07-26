@@ -1,11 +1,45 @@
 // Script2.js
-function startCeremonySequence(language = "both") {
+
+// Utility helper to create asynchronous delays
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * Types out text word-by-word into a parent container.
+ */
+async function typeTextWordByWord(parent, text, className, wordSpeed = 35) {
+    const stage = document.getElementById("stageSequence");
+    const p = document.createElement("p");
+    p.className = className;
+    parent.appendChild(p);
+
+    // Split text by space for word-by-word streaming
+    const words = text.split(" ");
+
+    for (let i = 0; i < words.length; i++) {
+        p.textContent += (i === 0 ? "" : " ") + words[i];
+
+        // Smoothly auto-scroll on every word added
+        if (stage) {
+            stage.scrollTo({
+                top: stage.scrollHeight,
+                behavior: "smooth"
+            });
+        }
+
+        await sleep(wordSpeed);
+    }
+}
+
+/**
+ * Main ceremony sequence runner with word-by-word animation.
+ */
+async function startCeremonySequence(language = "both", wordSpeed = 35) {
     const stage = document.getElementById("stageSequence");
     if (!stage) {
         console.error("Error: Element with ID 'stageSequence' not found.");
         return;
     }
-    
+
     stage.innerHTML = ""; // Clear previous content
 
     const steps = [
@@ -41,41 +75,22 @@ function startCeremonySequence(language = "both") {
         }
     ];
 
-    let cumulativeDelay = 0;
-
     for (const step of steps) {
-        // Option A: Cumulative timestamps (1s, 2s, 3s, 5s...)
-        cumulativeDelay = step.delay; 
+        // Wait for the step's initial delay before starting typing
+        await sleep(step.delay);
 
-        // Option B: If 'delay' is relative (wait X ms AFTER previous step finishes), uncomment line below:
-        // cumulativeDelay += step.delay;
+        const stepWrapper = document.createElement("div");
+        stepWrapper.className = "step-item";
+        stage.appendChild(stepWrapper);
 
-        setTimeout(() => {
-            const stepWrapper = document.createElement("div");
-            stepWrapper.className = "step-item";
+        // Stream Khmer word-by-word if requested
+        if (language === "khmer" || language === "both") {
+            await typeTextWordByWord(stepWrapper, step.text_khmer, "step-text step-khmer", wordSpeed);
+        }
 
-            // Render based on language parameter: 'khmer', 'english', or 'both'
-            if (language === "khmer" || language === "both") {
-                const pKhmer = document.createElement("p");
-                pKhmer.textContent = step.text_khmer;
-                pKhmer.className = "step-text step-khmer";
-                stepWrapper.appendChild(pKhmer);
-            }
-
-            if (language === "english" || language === "both") {
-                const pEnglish = document.createElement("p");
-                pEnglish.textContent = step.text_english;
-                pEnglish.className = "step-text step-english";
-                stepWrapper.appendChild(pEnglish);
-            }
-
-            stage.appendChild(stepWrapper);
-
-            // Auto-scroll smooth animation
-            stage.scrollTo({
-                top: stage.scrollHeight,
-                behavior: "smooth"
-            });
-        }, cumulativeDelay);
+        // Stream English word-by-word if requested
+        if (language === "english" || language === "both") {
+            await typeTextWordByWord(stepWrapper, step.text_english, "step-text step-english", wordSpeed);
+        }
     }
 }

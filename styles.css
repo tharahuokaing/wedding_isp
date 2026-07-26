@@ -489,3 +489,82 @@ footer p:first-child {
         letter-spacing: 1px;
     }
 }
+
+/* Base Style for Khmer LED Text */
+.led-hunting-text {
+    font-family: 'Moul', 'Noto Sans Khmer', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 5px #ffffff,
+        0 0 10px #ffd700,
+        0 0 20px #ff8c00,
+        0 0 30px #ff0000;
+}
+
+/* Activated via JS once all characters appear */
+.led-hunting-text.start-hunting {
+    animation: 
+        ledHuntingPulse 1.2s ease-in-out 10,
+        ledDisappear 1s ease-out 12s forwards;
+}
+
+/* LED Running Cursor Effect */
+.led-running::after {
+    content: "█";
+    display: inline-block;
+    margin-left: 4px;
+    color: #00ff66; /* Bright LED Mint Green */
+    animation: led-blink 0.6s infinite alternate;
+}
+
+@keyframes led-blink {
+    from { opacity: 1; text-shadow: 0 0 8px #00ff66; }
+    to { opacity: 0.1; }
+}
+
+/* 1. Hunting & Pulsing Neon Effect (Runs 10 times) */
+@keyframes ledHuntingPulse {
+    0%, 100% {
+        color: #ffffff;
+        text-shadow: 
+            0 0 4px #ffffff,
+            0 0 12px #ffd700,
+            0 0 22px #ff4500,
+            0 0 35px #8b0000;
+        transform: scale(1);
+    }
+    50% {
+        color: #ffe680;
+        text-shadow: 
+            0 0 8px #ffffff,
+            0 0 20px #ffcc00,
+            0 0 40px #ff0000,
+            0 0 60px #ff0000,
+            0 0 80px #b8860b;
+        transform: scale(1.06);
+    }
+}
+
+/* 2. Smooth Fade Out & Disappear */
+@keyframes ledDisappear {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    30% {
+        opacity: 0.3;
+        text-shadow: 0 0 5px #ff0000;
+    }
+    60% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+        visibility: hidden;
+    }
+}

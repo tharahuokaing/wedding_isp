@@ -338,7 +338,7 @@ footer p:first-child {
 
 /* LED Running Cursor Effect */
 .led-running::after {
-    content: "█";
+    content: "សិអារ្យ មេត្រី";
     display: inline-block;
     margin-left: 4px;
     color: #00ff66; /* Bright LED Mint Green for high visibility */
@@ -514,7 +514,7 @@ footer p:first-child {
 
 /* LED Running Cursor Effect */
 .led-running::after {
-    content: "█";
+    content: "សិអារ្យ មេត្រី";
     display: inline-block;
     margin-left: 4px;
     color: #00ff66; /* Bright LED Mint Green */

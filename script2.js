@@ -103,3 +103,38 @@ function startCeremonySequence(language = "both", typingSpeed = 30) {
         }, cumulativeDelay);
     }
 }
+
+// script2.js - Handles AI Text-to-Speech Reading and Custom Script Actions
+
+function handleAiReadText() {
+    const textElement = document.getElementById("interviewTextContent");
+    if (!textElement) return;
+
+    const textToRead = textElement.innerText || textElement.textContent;
+
+    // 1. Check SpeechSynthesis support
+    if ("speechSynthesis" in window) {
+        // Cancel any ongoing speech
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+        
+        // Set language preference (Khmer if supported by browser, else fallback)
+        utterance.lang = "km-KH"; 
+        utterance.rate = 0.9; // Slightly slower for clearer pronunciation
+
+        // Speak text
+        window.speechSynthesis.speak(utterance);
+    } else {
+        alert("Text-to-Speech is not supported in this browser.");
+    }
+
+    // 2. Trigger additional script logic from script2
+    runScript2Action();
+}
+
+// Custom handler inside script2.js
+function runScript2Action() {
+    console.log("Script2 AI Reader triggered!");
+    // You can add audio visualization, highlight animations, or API calls here
+}

@@ -793,7 +793,7 @@ footer p:first-child {
 
 /* Typewriter LED Terminal Cursor */
 .led-running::after {
-    content: "█";
+    content: "សិអារ្យ មេត្រី";
     display: inline-block;
     margin-left: 4px;
     color: #00ff66;

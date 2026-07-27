@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ពិធីបង្ហាញបច្ចេកវិទ្យា ISP / ISP Technology Exhibition Ceremony</title>
-    <link href="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="footer.png">
 </head>
@@ -31,60 +30,63 @@
                         <a href="https://tharahuokaing.github.io/ISP/" class="btn" target="_blank" rel="noopener noreferrer">
                             ក្រុមហ៊ុនអ៊ីនធើណេត (ISP) / Internet Service Provider (ISP)
                         </a>
-                    </li>    
+                    </li>     
                 </ul>
             </nav>
         </section>
 
-       <!-- Interview Section -->
+        <!-- Interview Section -->
         <section class="interview-section">
-    
-        <!-- LED Header Banner Container -->
-        <div class="led-banner-container">
-            <h3 id="interviewLedText" class="led-hunting-text led-running"></h3>
-        </div>
+            <!-- LED Header Banner Container -->
+            <div class="led-banner-container">
+                <h3 id="interviewLedText" class="led-hunting-text led-running"></h3>
+            </div>
 
-        <!-- Section Header & Sequence Control Button -->
-        <div class="interview-header-controls">
-            <h2 class="interview-main-title">🎤 ការសម្ភាស / Interview</h2>
-            <div id="stageSequence"></div>
-            <button type="button" class="btn-ceremony-sequence" onclick="startCeremonySequence()">
-                ▶️ ចាប់ផ្តើមកម្មវិធី / Start Ceremony Sequence
-            </button>
-        </div>
-
-        <!-- Main Interview Card -->
-        <div class="card interview-card">
-            <h3 class="interviewee-name">លោក ឡុង ឡាអ៊ីន / Mr. Long Lain</h3>
-
-            <!-- AI Read Button -->
-            <div class="ai-read-container">
-                <button type="button" class="btn-ai-read" onclick="handleAiReadText()">
-                    🔊 អានដោយ AI / AI Read Text
+            <!-- Section Header & Sequence Control Button -->
+            <div class="interview-header-controls">
+                <h2 class="interview-main-title">🎤 ការសម្ភាស / Interview</h2>
+                <button type="button" class="btn-ceremony-sequence" onclick="startCeremonySequence('both', 30)">
+                    ▶️ ចាប់ផ្តើមកម្មវិធី / Start Ceremony Sequence
                 </button>
             </div>
 
-            <!-- Content Block 1: 6G & Duty-Free / Odyssey -->
-            <div class="content-block step-item">
-                <div class="bilingual-pair">
-                    <p class="khmer-text">
-                        <strong>១. 6G និងប្រព័ន្ធផ្កាយរណប៖</strong> ថ្ងៃនេះយើងបានជួបសម្ភាសជាមួយលោក ឡុង ឡាអ៊ីន ដែលបានចែករំលែកចក្ខុវិស័យអំពីការអភិវឌ្ឍបច្ចេកវិទ្យា 6G និងអនាគតនៃសេវាអ៊ីនធើណេតសម្រាប់សង្គមឌីជីថល។ វត្តមានរបស់ ឡុងឡាអ៊ីន និងអមមកជាមួយខាង DUTY-FREE ដែលយើងតែងតែដឹងថា DUTY-FREE គ្មានប្រទេសណាមួយក្នុងសកលលោកហ៊ានទារពន្ធនោះឡើយ។ និងមានការសម្ភាសខាង Duty-Free ពាក់ពន្ធ័ ផ្កាយរណបដែលបង្ហោះដោយ Oddysey ដែលជាចៅប្រុសរបស់ Jonhnie Walker ជុំវិញគន្លងភពព្រះអង្គារដែលយើងឃើញក្នុងប្រព័ន្ធ Solar System ហៅថា 2001 Mars Odyssey គឺជាការពិតដែរឬទេ?
-                    </p>
-                    <p class="english-text">
-                        <strong>1. 6G & Satellite System:</strong> Today, we interviewed Mr. Long Lain, who shared his vision regarding 6G technology development and the future of internet services for a digital society. Mr. Long Lain's presence was accompanied by Duty-Free representatives—noting that no nation in the world levies taxes on duty-free items. The interview with Duty-Free also touched upon whether the Odyssey satellite—launched into Martian orbit as seen in the solar system under the name 2001 Mars Odyssey—was truly launched by the grandson of Johnnie Walker.
-                    </p>
-                </div>
+            <!-- Stage Sequence Display Box -->
+            <div class="stage-container">
+                <div id="stageSequence" class="stage-sequence-box"></div>
             </div>
 
-            <!-- Content Block 2: Free 6G Vision -->
-            <div class="content-block step-item">
-                <div class="bilingual-pair">
-                    <p class="khmer-text">
-                        <strong>២. ចក្ខុវិស័យសេវា 6G៖</strong> នៅក្នុងបទសម្ភាស លោកបានលើកឡើងពីគំនិតនៃការផ្តល់សេវា 6G ដោយមិនគិតថ្លៃ ជាចក្ខុវិស័យសម្រាប់អនាគត។ លោកបានពន្យល់ថា ការអនុវត្តគម្រោងបែបនេះនឹងអាស្រ័យលើកត្តាជាច្រើន រួមមានការវិនិយោគ បច្ចេកវិទ្យា បទប្បញ្ញត្តិ និងកិច្ចសហការរវាងភាគីពាក់ព័ន្ធ។
-                    </p>
-                    <p class="english-text">
-                        <strong>2. Free 6G Vision:</strong> During the interview, he presented the concept of offering free 6G services as a vision for the future. He explained that implementing such a project would depend on multiple factors, including financial investment, technology, regulatory frameworks, and stakeholder collaboration.
-                    </p>
+            <!-- Main Interview Card -->
+            <div class="card interview-card">
+                <div class="card-header-group">
+                    <h3 class="interviewee-name">លោក ឡុង ឡាអ៊ីន / Mr. Long Lain</h3>
+                    <!-- AI Read Button -->
+                    <button type="button" class="btn-ai-read" onclick="handleAiReadText(this)">
+                        <span class="icon">🔊</span>
+                        <span class="btn-text">អានដោយ AI / AI Read Text</span>
+                    </button>
+                </div>
+
+                <!-- Content Block 1: 6G & Duty-Free / Odyssey -->
+                <div class="content-block step-item">
+                    <div class="bilingual-pair">
+                        <p class="khmer-text" id="interviewTextContent">
+                            <strong>១. 6G និងប្រព័ន្ធផ្កាយរណប៖</strong> ថ្ងៃនេះយើងបានជួបសម្ភាសជាមួយលោក ឡុង ឡាអ៊ីន ដែលបានចែករំលែកចក្ខុវិស័យអំពីការអភិវឌ្ឍបច្ចេកវិទ្យា 6G និងអនាគតនៃសេវាអ៊ីនធើណេតសម្រាប់សង្គមឌីជីថល។ វត្តមានរបស់ ឡុងឡាអ៊ីន និងអមមកជាមួយខាង DUTY-FREE ដែលយើងតែងតែដឹងថា DUTY-FREE គ្មានប្រទេសណាមួយក្នុងសកលលោកហ៊ានទារពន្ធនោះឡើយ។ និងមានការសម្ភាសខាង Duty-Free ពាក់ពន្ធ័ ផ្កាយរណបដែលបង្ហោះដោយ Oddysey ដែលជាចៅប្រុសរបស់ Jonhnie Walker ជុំវិញគន្លងភពព្រះអង្គារដែលយើងឃើញក្នុងប្រព័ន្ធ Solar System ហៅថា 2001 Mars Odyssey គឺជាការពិតដែរឬទេ?
+                        </p>
+                        <p class="english-text">
+                            <strong>1. 6G & Satellite System:</strong> Today, we interviewed Mr. Long Lain, who shared his vision regarding 6G technology development and the future of internet services for a digital society. Mr. Long Lain's presence was accompanied by Duty-Free representatives—noting that no nation in the world levies taxes on duty-free items. The interview with Duty-Free also touched upon whether the Odyssey satellite—launched into Martian orbit as seen in the solar system under the name 2001 Mars Odyssey—was truly launched by the grandson of Johnnie Walker.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Content Block 2: Free 6G Vision -->
+                <div class="content-block step-item">
+                    <div class="bilingual-pair">
+                        <p class="khmer-text">
+                            <strong>២. ចក្ខុវិស័យសេវា 6G៖</strong> នៅក្នុងបទសម្ភាស លោកបានលើកឡើងពីគំនិតនៃការផ្តល់សេវា 6G ដោយមិនគិតថ្លៃ ជាចក្ខុវិស័យសម្រាប់អនាគត។ លោកបានពន្យល់ថា ការអនុវត្តគម្រោងបែបនេះនឹងអាស្រ័យលើកត្តាជាច្រើន រួមមានការវិនិយោគ បច្ចេកវិទ្យា បទប្បញ្ញត្តិ និងកិច្ចសហការរវាងភាគីពាក់ព័ន្ធ។
+                        </p>
+                        <p class="english-text">
+                            <strong>2. Free 6G Vision:</strong> During the interview, he presented the concept of offering free 6G services as a vision for the future. He explained that implementing such a project would depend on multiple factors, including financial investment, technology, regulatory frameworks, and stakeholder collaboration.
+                        </p>
                     </div>
                 </div>
 
@@ -123,7 +125,6 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -132,10 +133,10 @@
             <h2>🖼️ ការពិភាក្សានិងវិភាគអំពីរូបភាពរបស់ព្រះ សិអារ្យ មេត្រី <br><small>Discussion & Analysis on the Image of Maitreya Buddha</small></h2>
 
             <div class="image-gallery" style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
-                <img src="https://tharahuokaing.github.io/%E1%9E%9F%E1%9E%B7%E1%9E%A2%E1%9E%B6%E1%9E%9A%E1%9F%92%E1%9E%99%E1%9E%98%E1%9F%81%E1%9E%8F%E1%9F%92%E1%9E%9A%E1%9E%B8.jpg" alt="រូបភាពសម្រាប់ពិភាក្សា / Discussion Image 1">
+                <img src="https://tharahuokaing.github.io/%E1%9E%9F%E1%9E%B7%E1%9E%A2%E1%9E%B6%E1%9E%9A%E1%9F%92%E1%9E%99%E1%9E%98%E1%9F%81%E1%9E%8F%E1%9F%92%E1%9E%B8.jpg" alt="រូបភាពសម្រាប់ពិភាក្សា / Discussion Image 1">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5WR2F01i2ohA2YqZN1DizzKdbBdFWhipL1Ep48D3ypw&s=10" alt="រូបភាពសម្រាប់ពិភាក្សា / Discussion Image 2">
             </div>
-                
+
             <div class="card">
                 <p>
                     <strong>Khmer:</strong> រូបភាពនេះត្រូវបានបង្ហាញសម្រាប់ការពិភាក្សាអំពីសិល្បៈ និមិត្តរូប ឬការបកស្រាយ។<br>
@@ -160,7 +161,7 @@
                 <img src="https://github.com/tharahuokaing/wedding/blob/main/footer.png?raw=true" alt="Decorative Traditional Footer Sign">
             </div>
         </section>
-        
+
         <!-- Back to Top Button -->
         <button id="scrollTopBtn" onclick="scrollToTop()" style="display:none; position:fixed; bottom:20px; right:20px; z-index:999;">
             ⬆️ ត្រឡប់ទៅកំពូល / Back to Top
@@ -177,11 +178,11 @@
             © ២០២៦ សិរីមង្គលអាពាហ៍ពិពាហ៍ / © 2026 Auspicious Wedding Ceremony
         </p>
     </footer>
-        
+
     <!-- Scripts -->
     <script src="script.js"></script>
     <script src="script2.js"></script>
     <script src="music.js"></script>
-    
+
 </body>
 </html>
